@@ -16,7 +16,7 @@ export default function Student() {
 
   // Fetch latest poll
   useEffect(() => {
-    fetch("http://localhost:5000/api/polls")
+    fetch("https://live-polling-system-2-4qph.onrender.com/api/polls")
       .then((res) => res.json())
       .then((data) => {
         if (data.length > 0) {

@@ -39,7 +39,7 @@ export default function Teacher() {
   }, [dispatch]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/polls")
+    fetch("https://live-polling-system-2-4qph.onrender.com/api/polls")
       .then((res) => res.json())
       .then((data) => dispatch(setHistory(data)));
   }, [results, dispatch]);

@@ -1,7 +1,4 @@
 import { io } from "socket.io-client";
 
-const socket = io("http://localhost:5000", {
-  transports: ["websocket"],
-});
-
+const socket = io("https://live-polling-system-2-4qph.onrender.com"); // ✅ Render backend
 export default socket;
