@@ -74,13 +74,14 @@ io.on("connection", (socket) => {
 });
 
 const PORT = process.env.PORT || 5000;
+app.get("/", (req, res) => {
+  res.send("🚀 Live Polling System API is running on Render!");
+});
 // 🔹 MongoDB + Server start
 mongoose
   .connect(process.env.MONGO_URI)
   .then(() => {
-    app.get("/", (req, res) => {
-  res.send("🚀 Live Polling System API is running on Render!");
-});
+    
 server.listen(PORT, () => {
   console.log(`🚀 Server running on http://localhost:${PORT}`);
 });
