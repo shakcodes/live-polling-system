@@ -15,7 +15,7 @@ dotenv.config();
 const app = express();
 const server = http.createServer(app);
 
-app.use(cors({ origin: "http://localhost:5173" })); // frontend URL
+app.use(cors({ origin: "*" })); // frontend URL
 app.use(express.json());
 
 // ✅ REST API routes
